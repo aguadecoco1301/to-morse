@@ -53,8 +53,8 @@ function parse(text, e = ".", t = "-", undef = "?", mode = 1) {
 	return parsed
 }
 
-String.prototype.toMorse = function() {
-	return parse(String(this))
+String.prototype.toMorse = function(e = ".", t = "-", undef = "?") {
+	return parse(String(this), e, t, undef)
 }
 
 module.exports = function(text, e = ".", t = "-", undef = "?", mode = 1) {

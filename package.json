@@ -1,0 +1,17 @@
+{
+  "name": "to-morse",
+  "version": "1.0.0",
+  "description": "A node.js module to parse & stringify morse code",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aguadecoco1301/to-morse.git"
+  },
+  "keywords": ["npm", "morse", "parse"],
+  "author": "AguaDeCoco",
+  "license": "GPL-v3",
+  "bugs": {
+    "url": "https://github.com/aguadecoco1301/to-morse/issues"
+  },
+  "homepage": "https://github.com/aguadecoco1301/to-morse#readme"
+}
