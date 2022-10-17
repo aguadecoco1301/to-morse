@@ -9,7 +9,7 @@
   },
   "keywords": ["npm", "morse", "parse"],
   "author": "AguaDeCoco",
-  "license": "GPL-v3",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/aguadecoco1301/to-morse/issues"
   },
