@@ -1,4 +1,4 @@
-function parseLetter(letter, e = ".", t = "-", undef = "?", mode = 1) {
+function parseLetter(letter, e = ".", t = "-", undef = "?") {
 	let morse = [
 	  	["a", e+t],			//.-
 	  	["b", t+e+e+e],		//-...
@@ -35,16 +35,16 @@ function parseLetter(letter, e = ".", t = "-", undef = "?", mode = 1) {
 		)
 	)
 	if(!res) res = [letter, undef]
-	return res[mode]
+	return res[1]
 }
-function parse(text, e = ".", t = "-", undef = "?", mode = 1) {
+function parse(text, e = ".", t = "-", undef = "?") {
 	let words = text.split(" ")
 	let parsed = ""
 	let c = 0
 	words.forEach(word => {
 		let letters = word.split("")
 		letters.forEach(letter => {
-			parsed += parseLetter(letter, e, t, undef, mode)
+			parsed += parseLetter(letter, e, t, undef)
 			parsed += " "
 		})
 		c++
@@ -57,6 +57,7 @@ String.prototype.toMorse = function(e = ".", t = "-", undef = "?") {
 	return parse(String(this), e, t, undef)
 }
 
-module.exports = function(text, e = ".", t = "-", undef = "?", mode = 1) {
-	parse()
+module.exports = () => {
+	console.log("TO MORSE (HELP):\nFor help, visit https://github.com/aguadecoco1301/to-morse/")
+	return "[!] Bad usage"
 }
